@@ -10,17 +10,16 @@ public class App {
     public App() {
     }
 
-    private void logEvent(String msg){
-        String message = "Bday of #"+client.getId()+" "+client.getFullName();
-        logger.logEvent(message);
+    private void logEvent(/*String*/Event msg){
+        //String message = "Bday of #"+client.getId()+" "+client.getFullName();
+        logger.logEvent(/*message*/msg);
     }
 
     public static void main(String[] args) {
         App app = new App(new Client("1", "John Doe"), new ConsoleEventLogger());
        // app.client = new Client("1", "John Doe");
         //app.logger = new ConsoleEventLogger();
-
-        app.logEvent(app.client.fullName );
+        //app.logEvent(app.client.fullName);
 
     }
 }
