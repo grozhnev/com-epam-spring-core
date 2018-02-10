@@ -28,7 +28,7 @@
         <constructor-arg  name="fileName"  type="java.lang.String" value="logging"/>
     </bean>
 
-    <bean id="cacheFileLogger" class="CacheFileEventLogger">
+    <bean id="cacheFileLogger" class="CacheFileEventLogger" init-method="init" destroy-method="destroy">
         <constructor-arg  name="cacheSize" type="java.lang.Integer" value="1024"/>
     </bean>
 
